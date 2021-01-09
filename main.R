@@ -83,7 +83,7 @@ for( candidate in 1:ll){
     data=cbind(data,gen.var.data (eps_sigma,p,A3, 2*n,vzero=c(data[,ncol(data)])))
     
     #For convenient due to data splitting, col(data) (or the length of the time series) is odd.
-   
+    #the change points are at 2*n and 4*n
     
     lambda.lasso.list=c(  3,4 )
     
@@ -96,7 +96,7 @@ for( candidate in 1:ll){
      print(  "dp=")
      print(dp.estimate)
      dp.rec[[candidate]][[rr]]=list(dp.estimate[-c(1,length(dp.estimate))])
-     haus1[candidate]=haus1[candidate]+hausdorff.distance(dp.estimate,c(0, n,2*n,3*n) )
+     haus1[candidate]=haus1[candidate]+hausdorff.distance(dp.estimate,c(0, 2*n,4*n,6*n) )
      print(haus1/rr)
     #END:  DP
     
@@ -110,7 +110,7 @@ for( candidate in 1:ll){
      print( "lr=")
        print(lr.estimate)
        lr.rec[[candidate]][[rr]]=list(lr.estimate[-c(1,length(lr.estimate))])
-       haus2[candidate]=haus2[candidate]+hausdorff.distance(lr.estimate,c(0, n,2*n,3*n) )
+       haus2[candidate]=haus2[candidate]+hausdorff.distance(lr.estimate,c(0, 2*n,4*n,6*n) )
        print(haus2/rr)
     #END local refinement
     
