@@ -154,6 +154,6 @@ dp.main.function=function(data, p, lambda.lasso.list ,gam.list, delta1){
   X.test= X[,seq(1,ncol( X)-1,2)+1]
   Y.train= Y[,seq(1,ncol( Y),2)]
   Y.test= Y[,seq(1,ncol( Y)-1,2)+1]
-  return(dp.main(X.train, Y.train,X.test,Y.test, p, lambda.lasso.list ,gam.list, delta1))
+  return(2*dp.main(X.train, Y.train,X.test,Y.test, p, lambda.lasso.list ,gam.list, delta1))
   
 }
