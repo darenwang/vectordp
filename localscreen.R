@@ -120,7 +120,7 @@ local.main.function= function (data,delta.local, lambda.group.list,dp.estimate){
   X.test= X[,seq(1,ncol( X)-1,2)+1]
   Y.train= Y[,seq(1,ncol( Y),2)]
   Y.test= Y[,seq(1,ncol( Y)-1,2)+1]
-  return( local.group (X, Y,X.train, Y.train, X.test, Y.test,delta.local, lambda.group.list,dp.estimate))
+  return(2* local.group (X, Y,X.train, Y.train, X.test, Y.test,delta.local, lambda.group.list,dp.estimate))
 }
 
 
