@@ -85,7 +85,7 @@ for( candidate in 1:ll){
     #For convenient due to data splitting, col(data) (or the length of the time series) is odd.
     #the change points are at 2*n and 4*n
     
-    lambda.lasso.list=c( 1, 3,4,10 )
+    lambda.lasso.list=c(  3,4,10,20  )
     
     gam.list=seq(1, 50,2) 
     #START: DP
