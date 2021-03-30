@@ -9,7 +9,7 @@ convert.design.matrix.one.change=function(X,t){
   xx2=t(X)
   xx2[1:t,]=0
 
-  xx=cbind(xx1/sqrt(ee),xx2/sqrt(ee))
+  xx=cbind(xx1/sqrt(t),xx2/sqrt(ee-t))
   index=c()
   for ( pp in 1:p){
     index=c(index,pp,pp+p)
